@@ -4,7 +4,7 @@ public class UsuarioSeguro {
     private String password;
 
     public void setNombreUsuario(String nombreUsuario) {
-        if (nombreUsuario == null) {
+        if (nombreUsuario.isEmpty() ) {
             System.out.println("Ingresa un nombre del usuario");
         } else {
             this.nombreUsuario = nombreUsuario;
