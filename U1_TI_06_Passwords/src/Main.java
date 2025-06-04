@@ -25,7 +25,24 @@ public class Main {
                     System.out.println("Acceso concedido.");
                 }
 
+                System.out.print("Verifica la contraseña (incorrecta): ");
+                String intentoIncorrecto = scanner.nextLine();
+                if (usuario.autenticar(intentoIncorrecto)) {
+                    System.out.println("Acceso concedido.");
+                } else {
+                    System.out.println("Acceso denegado.");
+                }
+
+                System.out.print("Verifica la contraseña (correcta): ");
+                String intentoCorrecto = scanner.nextLine();
+                if (usuario.autenticar(intentoCorrecto)) {
+                    System.out.println("Acceso concedido.");
+                } else {
+                    System.out.println("Acceso denegado.");
+                }
+
             } while (usuario.getPassword() == null);
+
         }
 
 
